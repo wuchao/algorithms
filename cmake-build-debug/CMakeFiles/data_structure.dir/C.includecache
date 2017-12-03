@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wu/CLionProjects/data-structure/main.c
+stdio.h
+-
+syntax.c
+/home/wu/CLionProjects/data-structure/syntax.c
+
+/home/wu/CLionProjects/data-structure/syntax.c
+stdio.h
+-
+
