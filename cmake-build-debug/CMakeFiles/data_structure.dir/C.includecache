@@ -6,11 +6,21 @@
 
 #IncludeRegexTransform: 
 
+/home/wu/CLionProjects/data-structure/algorithms/bubble-sort .c
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+
 /home/wu/CLionProjects/data-structure/main.c
 stdio.h
 -
 syntax.c
 /home/wu/CLionProjects/data-structure/syntax.c
+algorithms/bubble-sort .c
+/home/wu/CLionProjects/data-structure/algorithms/bubble-sort .c
 
 /home/wu/CLionProjects/data-structure/syntax.c
 stdio.h
