@@ -31,22 +31,16 @@ malloc.h
 /home/wu/CLionProjects/data-structure/main.c
 stdio.h
 -
-syntax.c
-/home/wu/CLionProjects/data-structure/syntax.c
+syntax/syntax.c
+/home/wu/CLionProjects/data-structure/syntax/syntax.c
 algorithms/bubble_sort .c
 /home/wu/CLionProjects/data-structure/algorithms/bubble_sort .c
-utils/GetWeek.c
-/home/wu/CLionProjects/data-structure/utils/GetWeek.c
 algorithms/straight_insert_sort.c
 /home/wu/CLionProjects/data-structure/algorithms/straight_insert_sort.c
 algorithms/straight_sort_insert_header_node.c
 /home/wu/CLionProjects/data-structure/algorithms/straight_sort_insert_header_node.c
 
-/home/wu/CLionProjects/data-structure/syntax.c
-stdio.h
--
-
-/home/wu/CLionProjects/data-structure/utils/GetWeek.c
+/home/wu/CLionProjects/data-structure/syntax/syntax.c
 stdio.h
 -
 

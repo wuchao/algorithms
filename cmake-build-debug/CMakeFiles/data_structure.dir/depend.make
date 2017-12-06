@@ -5,6 +5,5 @@ CMakeFiles/data_structure.dir/main.c.o: ../algorithms/bubble_sort\ .c
 CMakeFiles/data_structure.dir/main.c.o: ../algorithms/straight_insert_sort.c
 CMakeFiles/data_structure.dir/main.c.o: ../algorithms/straight_sort_insert_header_node.c
 CMakeFiles/data_structure.dir/main.c.o: ../main.c
-CMakeFiles/data_structure.dir/main.c.o: ../syntax.c
-CMakeFiles/data_structure.dir/main.c.o: ../utils/GetWeek.c
+CMakeFiles/data_structure.dir/main.c.o: ../syntax/syntax.c
 
