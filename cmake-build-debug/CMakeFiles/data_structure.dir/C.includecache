@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/wu/CLionProjects/data-structure/algorithms/bubble-sort .c
+/home/wu/CLionProjects/data-structure/algorithms/bubble_sort .c
 stdio.h
 -
 stdlib.h
@@ -14,15 +14,39 @@ stdlib.h
 time.h
 -
 
+/home/wu/CLionProjects/data-structure/algorithms/straight_insert_sort.c
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+
+/home/wu/CLionProjects/data-structure/algorithms/straight_sort_insert_header_node.c
+stdio.h
+-
+malloc.h
+-
+
 /home/wu/CLionProjects/data-structure/main.c
 stdio.h
 -
 syntax.c
 /home/wu/CLionProjects/data-structure/syntax.c
-algorithms/bubble-sort .c
-/home/wu/CLionProjects/data-structure/algorithms/bubble-sort .c
+algorithms/bubble_sort .c
+/home/wu/CLionProjects/data-structure/algorithms/bubble_sort .c
+utils/GetWeek.c
+/home/wu/CLionProjects/data-structure/utils/GetWeek.c
+algorithms/straight_insert_sort.c
+/home/wu/CLionProjects/data-structure/algorithms/straight_insert_sort.c
+algorithms/straight_sort_insert_header_node.c
+/home/wu/CLionProjects/data-structure/algorithms/straight_sort_insert_header_node.c
 
 /home/wu/CLionProjects/data-structure/syntax.c
+stdio.h
+-
+
+/home/wu/CLionProjects/data-structure/utils/GetWeek.c
 stdio.h
 -
 
