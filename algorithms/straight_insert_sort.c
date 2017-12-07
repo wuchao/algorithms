@@ -6,9 +6,11 @@
 
 /*直插排序*/
 void straight_insert_sort(int a[], int n) {
+
     int i, j, t;
 
     for (i = 1; i < n; i++) {
+
         t = a[i];
         j = i - 1;
 

@@ -75,6 +75,7 @@ int straight_insert_sort_header_node(LinkList *linkList) {
         r = p->next;
         q = linkList;
 
+        // 这里的 p->next->data 不能等于 p->data，即 q 必须是 p 前面的节点元素
         while ((q->next != NULL) && (q->next->data < p->data)) {
             q = q->next;
         }

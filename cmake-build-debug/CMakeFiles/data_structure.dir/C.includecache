@@ -14,6 +14,20 @@ stdlib.h
 time.h
 -
 
+/home/wu/CLionProjects/data-structure/algorithms/dijkstra_node.c
+stdio.h
+-
+malloc.h
+-
+
+/home/wu/CLionProjects/data-structure/algorithms/shell_sort.c
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+
 /home/wu/CLionProjects/data-structure/algorithms/straight_insert_sort.c
 stdio.h
 -
@@ -39,6 +53,10 @@ algorithms/straight_insert_sort.c
 /home/wu/CLionProjects/data-structure/algorithms/straight_insert_sort.c
 algorithms/straight_sort_insert_header_node.c
 /home/wu/CLionProjects/data-structure/algorithms/straight_sort_insert_header_node.c
+algorithms/shell_sort.c
+/home/wu/CLionProjects/data-structure/algorithms/shell_sort.c
+algorithms/dijkstra_node.c
+/home/wu/CLionProjects/data-structure/algorithms/dijkstra_node.c
 
 /home/wu/CLionProjects/data-structure/syntax/syntax.c
 stdio.h

@@ -30,9 +30,7 @@ int straight_sort_insert_node(LinkList *linkList) {
     if (q->data > p->data) {
         p->next = q->next;
         q->next = p;
-    }
-
-    else {
+    } else {
         while (p) {
             r = p->next;
             q = linkList;
