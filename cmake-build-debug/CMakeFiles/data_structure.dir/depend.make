@@ -3,6 +3,7 @@
 
 CMakeFiles/data_structure.dir/main.c.o: ../algorithms/bubble_sort\ .c
 CMakeFiles/data_structure.dir/main.c.o: ../algorithms/dijkstra_node.c
+CMakeFiles/data_structure.dir/main.c.o: ../algorithms/seq_list.c
 CMakeFiles/data_structure.dir/main.c.o: ../algorithms/shell_sort.c
 CMakeFiles/data_structure.dir/main.c.o: ../algorithms/straight_insert_sort.c
 CMakeFiles/data_structure.dir/main.c.o: ../algorithms/straight_sort_insert_header_node.c

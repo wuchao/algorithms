@@ -20,6 +20,12 @@ stdio.h
 malloc.h
 -
 
+/home/wu/CLionProjects/data-structure/algorithms/seq_list.c
+stdio.h
+-
+stdlib.h
+-
+
 /home/wu/CLionProjects/data-structure/algorithms/shell_sort.c
 stdio.h
 -
@@ -57,6 +63,8 @@ algorithms/shell_sort.c
 /home/wu/CLionProjects/data-structure/algorithms/shell_sort.c
 algorithms/dijkstra_node.c
 /home/wu/CLionProjects/data-structure/algorithms/dijkstra_node.c
+algorithms/seq_list.c
+/home/wu/CLionProjects/data-structure/algorithms/seq_list.c
 
 /home/wu/CLionProjects/data-structure/syntax/syntax.c
 stdio.h

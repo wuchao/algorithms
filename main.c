@@ -5,6 +5,7 @@
 #include "algorithms/straight_sort_insert_header_node.c"
 #include "algorithms/shell_sort.c"
 #include "algorithms/dijkstra_node.c"
+#include "algorithms/seq_list.c"
 
 int main() {
     printf("Hello, World!\n\n");
@@ -23,7 +24,12 @@ int main() {
     // 希尔排序
 //    print_shell_sort();
 
-    print_dijkstra_node();
+    // dijkstra 算法
+//    print_dijkstra_node();
+
+    // 顺序表
+//    print_seq_list();
+
 
     return 0;
 }

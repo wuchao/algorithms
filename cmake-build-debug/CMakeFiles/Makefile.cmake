@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
-  "CMakeFiles/3.9.4/CMakeCCompiler.cmake"
-  "CMakeFiles/3.9.4/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.9.4/CMakeSystem.cmake"
+  "CMakeFiles/3.9.6/CMakeCCompiler.cmake"
+  "CMakeFiles/3.9.6/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.9.6/CMakeSystem.cmake"
   "CMakeFiles/feature_tests.c"
   "CMakeFiles/feature_tests.cxx"
   "/usr/local/CLion/clion-2017.2.3/bin/cmake/share/cmake-3.9/Modules/CMakeCCompiler.cmake.in"
@@ -106,11 +106,11 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/3.9.4/CMakeSystem.cmake"
-  "CMakeFiles/3.9.4/CMakeCCompiler.cmake"
-  "CMakeFiles/3.9.4/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.9.4/CMakeCCompiler.cmake"
-  "CMakeFiles/3.9.4/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.9.6/CMakeSystem.cmake"
+  "CMakeFiles/3.9.6/CMakeCCompiler.cmake"
+  "CMakeFiles/3.9.6/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.9.6/CMakeCCompiler.cmake"
+  "CMakeFiles/3.9.6/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

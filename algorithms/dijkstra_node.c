@@ -11,25 +11,25 @@
 typedef int infoType; /*定义边表结点权值的数据的数据类型*/
 typedef int vertexType; /*定义顶点结点上存储的数据的数据类型*/
 
-//定义边表结点结构体
+// 定义边表结点结构体
 typedef struct edgenode {
     int adjvertex; //边表结点域
     infoType info; //边表结点权值，这里存放的是其父结点到该结点的距离
     struct edgenode *next; //指向下一个邻接点的指针域
 } EdgeNode;
 
-//定义顶点结点结构体
+// 定义顶点结点结构体
 typedef struct vertexnode {
     vertexType boolval; /* 顶点结点域，这里存放的是该结点是否找到其距源顶点最短路径的标记，
 						若找到最短路径，则该值为1，否则该值为0 */
-    EdgeNode *firstedge; //边表头指针
+    EdgeNode *firstedge; // 边表头指针
 } VertexNode;
 
 typedef struct {
     VertexNode adjlist[MAX]; /*邻接表*/
     int vertexNum; /*顶点数*/
     int edgeNum; /*边数*/
-} ALGraph; //adjacency list graph:邻接表
+} ALGraph; // adjacency list graph : 邻接表
 
 /**************************************************************
 函数名称：CreateGraph
@@ -51,19 +51,19 @@ ALGraph *CreateGraph(int vertexNum, int edgeNum) {
         G->vertexNum = vertexNum;
         G->edgeNum = edgeNum;
 
-        //建立顶点表
+        // 建立顶点表
         for (k = 0; k < G->vertexNum; k++) {
-            G->adjlist[k].boolval = 0; /*boolval值判断该结点到源结点的距离是否是最短距							离，是1表示已达最短距离，是0表示还没有达最短距离*/
+            G->adjlist[k].boolval = 0; /*boolval值判断该结点到源结点的距离是否是最短距离，是1表示已达最短距离，是0表示还没有达最短距离*/
             G->adjlist[k].firstedge = NULL;
         }
 
-        //建立边表
+        // 建立边表
         printf("请输入顶点、其邻接顶点和权值信息：\n");
         for (k = 0; k < G->edgeNum; k++) {
             int i, j;
             infoType info;
 
-            //<i,j>表现的是边的关系，有多少对<i,j>就有多少边，所以for循环次数为G->edgeNum
+            // <i,j>表现的是边的关系，有多少对<i,j>就有多少边，所以for循环次数为G->edgeNum
             scanf("%d,%d,%d", &i, &j, &info);
             if (i != j) {
                 p = (EdgeNode *) malloc(sizeof(EdgeNode));
@@ -88,20 +88,21 @@ void dijkstra(ALGraph *G, int u, int d[], int p[]) {
     int i, j, t;
     EdgeNode *pnode;
 
-    //初始化参数
+    // 初始化参数
     for (i = 0; i < G->vertexNum; i++) {
-        //G->adjlist[i].boolval = 0;
         d[i] = MAX_FLOAT_NUM;
         p[i] = -1;
     }
 
-    //更新源顶点直接子结点到源结点的最短距离
+    // 更新源顶点直接子结点到源结点的最短距离
     if (!(pnode = G->adjlist[u].firstedge)) {
         return;
     }
 
+    // 循环找出源结点相邻的距离源结点最近的结点
     while (pnode) {
         d[pnode->adjvertex] = pnode->info;
+        // 与源结点相邻的前方顶点都是源结点，即 u
         p[pnode->adjvertex] = u;
         pnode = pnode->next;
     }
@@ -109,12 +110,12 @@ void dijkstra(ALGraph *G, int u, int d[], int p[]) {
     G->adjlist[u].boolval = 1;
     d[u] = 0;
 
-    //更新所有除源结点外的结点到源结点的最短距离
+    // 更新所有除源结点外的结点到源结点的最短距离
     for (i = 1; i < G->vertexNum; i++) {
         int min = MAX_FLOAT_NUM;
         t = u;
 
-        //在所有结点中找出一个距离源结点距离最小的一个结点
+        // 在所有结点中找出一个距离源结点距离最小的一个结点
         for (j = 0; j < G->vertexNum; j++) {
             if (G->adjlist[j].boolval != 1 && min > d[j]) {
                 t = j;
@@ -122,7 +123,8 @@ void dijkstra(ALGraph *G, int u, int d[], int p[]) {
             }
         }
 
-        if (t == u) { //顶点到达不了源顶点（距离为MAX_FLOAT_NUM）或者顶点已经找到了到源顶点的最短路径（boolval值为1）
+        // 顶点到达不了源顶点（距离为MAX_FLOAT_NUM）或者顶点已经找到了到源顶点的最短路径（boolval值为1）
+        if (t == u) {
             break;
         }
 
@@ -135,9 +137,11 @@ void dijkstra(ALGraph *G, int u, int d[], int p[]) {
         */
         pnode = G->adjlist[t].firstedge;
 
+        // 循环更新t结点相邻的距离 t 结点的距离
         while (pnode) {
             if ((G->adjlist[pnode->adjvertex].boolval != 1) && (d[pnode->adjvertex] > (d[t] + pnode->info))) {
                 d[pnode->adjvertex] = d[t] + pnode->info;
+                // 与 t 结点相邻的前方顶点都是 t 结点，即 t
                 p[pnode->adjvertex] = t;
             }
             pnode = pnode->next;
