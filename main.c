@@ -6,6 +6,7 @@
 #include "algorithms/shell_sort.c"
 #include "algorithms/dijkstra_node.c"
 #include "algorithms/seq_list.c"
+#include "algorithms/maze_seq_stack.c"
 
 int main() {
     printf("Hello, World!\n\n");
@@ -30,6 +31,8 @@ int main() {
     // 顺序表
 //    print_seq_list();
 
+    // 顺序表栈实现的迷宫
+    print_maze_seq_stack();
 
     return 0;
 }
