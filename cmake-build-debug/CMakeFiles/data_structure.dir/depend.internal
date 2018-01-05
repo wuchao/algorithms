@@ -4,6 +4,7 @@
 CMakeFiles/data_structure.dir/main.c.o
  /home/wu/CLionProjects/data-structure/algorithms/bubble_sort .c
  /home/wu/CLionProjects/data-structure/algorithms/dijkstra_node.c
+ /home/wu/CLionProjects/data-structure/algorithms/maze_seq_stack.c
  /home/wu/CLionProjects/data-structure/algorithms/seq_list.c
  /home/wu/CLionProjects/data-structure/algorithms/shell_sort.c
  /home/wu/CLionProjects/data-structure/algorithms/straight_insert_sort.c

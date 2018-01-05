@@ -25,7 +25,7 @@ typedef struct {
 typedef struct {
     int ord;        //通道块在路径上的“序号”
     PosType seat;    //通道块在迷宫中的“坐标位置”
-    int di;            //从此通道块走向下一通道块的“方向”
+    int di;           //从此通道块走向下一通道块的“方向”
 } SElemType;
 
 typedef struct {
@@ -70,7 +70,7 @@ void random_init_maze() {
 //当前块可否通过
 Status pass(PosType e) {
     if (mg[e.x][e.y] == 0) { // 0时可以通过
-        return OK;             // 如果当前位置是可以通过，返回1
+        return OK;           // 如果当前位置是可以通过，返回1
     }
     return OVERFLOW;         // 其它情况返回0
 }
@@ -133,21 +133,21 @@ Status mark_print(PosType e) {
 PosType next_pos(PosType *e, int dir) {
     PosType E;
     switch (dir) {
-        case 1:
-            E.x = e->x + 1;     //向下
+        case 1:                 //向右
+            E.x = e->x;
+            E.y = e->y + 1;
+            break;
+        case 2:                 //向下
+            E.x = e->x + 1;
             E.y = e->y;
             break;
-        case 2:
+        case 3:                 //向左
             E.x = e->x;
-            E.y = e->y + 1;     //向右
+            E.y = e->y - 1;
             break;
-        case 3:
-            E.x = e->x - 1;     //向上
+        case 4:                 //向上
+            E.x = e->x - 1;
             E.y = e->y;
-            break;
-        case 4:
-            E.x = e->x;
-            E.y = e->y - 1;    //向左
             break;
     }
     return E;
@@ -206,7 +206,7 @@ void print_maze() {
     for (i = 0; i < MAZE_HIGH; i++) {
         for (j = 0; j < MAZE_WIDTH; j++) {
             if (mg[i][j] == 0) {
-                printf("  ");               //可以走的路径
+                printf(" ");               //可以走的路径
             } else if (mg[i][j] == 1) {
                 printf("■");                //迷宫的“墙”
             } else if (mg[i][j] == 3) {
