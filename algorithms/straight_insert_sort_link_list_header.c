@@ -10,7 +10,7 @@ typedef struct node {
     struct node *next;
 } LinkList;
 
-LinkList *createList() {
+LinkList *init_straight_insert_sort_link_list_header() {
     int n, i;
     LinkList *linkList = (LinkList *) malloc(sizeof(LinkList));;
     LinkList *pre = NULL;
@@ -39,7 +39,7 @@ LinkList *createList() {
     return linkList;
 }
 
-int destroyList(LinkList **pplinkList) {
+int destroy_straight_insert_sort_link_list_header(LinkList **pplinkList) {
 
     LinkList *p = NULL, *q = NULL;
 
@@ -59,30 +59,33 @@ int destroyList(LinkList **pplinkList) {
     return 1;
 }
 
-int straight_insert_sort_header_node(LinkList *linkList) {
+int straight_insert_sort_link_list_header(LinkList *linkList) {
 
-    LinkList *p = NULL, *q = NULL, *r = NULL;
+    LinkList *p = NULL, *q = NULL, *r = NULL, *u = NULL;
 
     if (!linkList) {
         return 0;
     }
 
+    // 指向原链表（除头结点）
     p = linkList->next;
+    // 原链表置空
     linkList->next = NULL;
 
-    // r=p->next; p=r;
+    // 循环p链表，将p链表上的节点按照节点data域递增顺序排列到q节点上
     while (p) {
+        // 指向新链表（除头结点）
         r = p->next;
-        q = linkList;
+        q = linkList->next;
 
-        // 这里的 p->next->data 不能等于 p->data，即 q 必须是 p 前面的节点元素
-        while ((q->next != NULL) && (q->next->data < p->data)) {
+        while ((q != NULL) && (q->data <= p->data)) {
+            u = q;
             q = q->next;
         }
 
-        // 把p插到q结点后面
-        p->next = q->next;
-        q->next = p;
+        // 把p插到q结点前面，即u后面
+        p->next = u->next;
+        u->next = p;
 
         p = r;
     }
@@ -90,17 +93,17 @@ int straight_insert_sort_header_node(LinkList *linkList) {
     return 1;
 }
 
-int print_straight_insert_sort_header_node() {
+int print_straight_insert_sort_link_list_header() {
 
     LinkList *linkList = NULL, *p = NULL, *q = NULL;
 
-    linkList = createList();
+    linkList = init_straight_insert_sort_link_list_header();
 
     if (linkList == NULL) {
         printf("链表为空\n");
     }
 
-    straight_insert_sort_header_node(linkList);
+    straight_insert_sort_link_list_header(linkList);
 
     p = linkList->next;
 
@@ -112,7 +115,7 @@ int print_straight_insert_sort_header_node() {
         printf("%d\t", q->data);
     }
 
-    destroyList(&linkList);
+    destroy_straight_insert_sort_link_list_header(&linkList);
 
     return 1;
 }

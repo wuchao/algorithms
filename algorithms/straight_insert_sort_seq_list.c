@@ -5,7 +5,7 @@
 #define N 10
 
 /*直插排序*/
-void straight_insert_sort(int a[], int n) {
+void straight_insert_sort_seq_list(int a[], int n) {
 
     int i, j, t;
 
@@ -25,7 +25,7 @@ void straight_insert_sort(int a[], int n) {
     return;
 }
 
-int print_straight_insert_sort() {
+int print_straight_insert_sort_seq_list() {
     int a[N];
     int i;
 
@@ -37,7 +37,7 @@ int print_straight_insert_sort() {
     }
     printf("\n\n");
 
-    straight_insert_sort(a, N);
+    straight_insert_sort_seq_list(a, N);
     printf("直插排序的结果为：\n");
     for (i = 0; i < N; i++) {
         printf("%d\t", a[i]);

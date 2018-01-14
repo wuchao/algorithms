@@ -11,7 +11,7 @@ typedef struct node {
     struct node *next;
 } LinkList;
 
-int straight_sort_insert_node(LinkList *linkList) {
+int straight_insert_sort_link_list_noheader(LinkList *linkList) {
 
     LinkList *p = NULL, *q = NULL, *r = NULL;
 
@@ -20,6 +20,7 @@ int straight_sort_insert_node(LinkList *linkList) {
     }
 
     p = linkList->next;
+    q = linkList;
     linkList->next = NULL;
 
     /*
@@ -27,24 +28,24 @@ int straight_sort_insert_node(LinkList *linkList) {
         if判断语句里面执行的代码就是将一个无头结点的链表的第一个元素和第二个元素调换位置，
         这个操作也是一个无头节点链表的逆置的关键操作
     */
-    if (q->data > p->data) {
-        p->next = q->next;
-        q->next = p;
-    } else {
-        while (p) {
-            r = p->next;
-            q = linkList;
-
-            while ((q->next != NULL) && (q->next->data < p->data)) {
-                q = q->next;
-            }
-
-            p->next = q->next;
-            q->next = p;
-
-            p = r;
-        }
-    }
+//    if (p && q->data > p->data) {
+//        p->next = q->next;
+//        q->next = p;
+//    }
+//
+//    while (p) {
+//        r = p->next;
+//        q = linkList;
+//
+//        while ((q != NULL) && (q->data < p->data)) {
+//            q = q->next;
+//        }
+//
+//        p->next = q->next;
+//        q->next = p;
+//
+//        p = r;
+//    }
 
     return 1;
 }

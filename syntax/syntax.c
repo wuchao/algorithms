@@ -3,7 +3,7 @@
 //
 #include <stdio.h>
 
-void systnx() {
+void syntax() {
     char c;
     int i;
     long l;
