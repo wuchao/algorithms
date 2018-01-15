@@ -7,6 +7,7 @@
 #include "algorithms/dijkstra_node.c"
 #include "algorithms/seq_list.c"
 #include "algorithms/maze_seq_stack.c"
+#include "algorithms/bin_seq_tree.c"
 
 int main() {
     printf("Hello, World!\n\n");
@@ -33,6 +34,9 @@ int main() {
 
     // 顺序表栈实现的迷宫
 //    print_maze_seq_stack();
+
+    // 二叉排序树
+    print_bin_tree();
 
     return 0;
 }

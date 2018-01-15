@@ -14,7 +14,6 @@
 #include<stdlib.h>
 #include<time.h>
 
-#define T "\t"
 #define GapLength 3
 #define FSDT "%d"    /*FSDT:dataType类型的格式说明符(format specifier of dataType)*/
 
@@ -65,7 +64,7 @@ int print_shell_sort() {
     printf("带排序序列：\n");
     for (i = 0; i < SIZE; i++) {
         H[i] = rand() % 101;        /*随机赋SIZE个介于0至100整数范围内的待排序的值  （*运算与[]运算是等价的）*/
-        printf(FSDT T, H[i]);
+        printf(FSDT "\t", H[i]);
     }
     printf("\n");
 
@@ -74,7 +73,7 @@ int print_shell_sort() {
         shell_sort(H, SIZE, gaps[i]);
         printf("步长为" FSDT "排序结果为：\n", gaps[i]);
         for (j = 0; j < SIZE; j++) {
-            printf(FSDT T, H[j]);
+            printf(FSDT "\t", H[j]);
         }
         printf("\n");
     }
