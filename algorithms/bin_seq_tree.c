@@ -270,12 +270,13 @@ BinTree *find_max_bin_tree(BinTree *T) {
 /**
  * 删除节点（《linux c 编程一站式学习》中案例）
  * 参考： http://blog.csdn.net/jnu_simba/article/details/8888014
- * @param t
+ *
+ * @param T
  * @param key
  * @return
  */
-BinTree *delete_bin_tree(BinTree *t, DataType elem) {
-    BinTree *p;
+BinTree *delete_bin_tree(BinTree **T, DataType elem) {
+    BinTree *p, *t = *T;
     if (!t) {
         return NULL;
     }
@@ -287,7 +288,7 @@ BinTree *delete_bin_tree(BinTree *t, DataType elem) {
         if (t->lchild == NULL && t->rchild == NULL) {
             /* if t is a leaf node */
             free(t);
-            t = NULL;
+            *T = NULL;
         } else if (t->lchild) {  /* if t has left subtree */
             /* replace t with the rightmost node in left subtree */
             p = find_max_bin_tree(t->lchild);

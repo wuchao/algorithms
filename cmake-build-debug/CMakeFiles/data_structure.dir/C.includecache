@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/wu/CLionProjects/data-structure/algorithms/bin_seq_tree.c
+stdio.h
+-
+malloc.h
+-
+
 /home/wu/CLionProjects/data-structure/algorithms/bubble_sort .c
 stdio.h
 -
@@ -42,18 +48,18 @@ stdlib.h
 time.h
 -
 
-/home/wu/CLionProjects/data-structure/algorithms/straight_insert_sort.c
+/home/wu/CLionProjects/data-structure/algorithms/straight_insert_sort_link_list_header.c
+stdio.h
+-
+malloc.h
+-
+
+/home/wu/CLionProjects/data-structure/algorithms/straight_insert_sort_seq_list.c
 stdio.h
 -
 stdlib.h
 -
 time.h
--
-
-/home/wu/CLionProjects/data-structure/algorithms/straight_sort_insert_header_node.c
-stdio.h
--
-malloc.h
 -
 
 /home/wu/CLionProjects/data-structure/main.c
@@ -63,10 +69,10 @@ syntax/syntax.c
 /home/wu/CLionProjects/data-structure/syntax/syntax.c
 algorithms/bubble_sort .c
 /home/wu/CLionProjects/data-structure/algorithms/bubble_sort .c
-algorithms/straight_insert_sort.c
-/home/wu/CLionProjects/data-structure/algorithms/straight_insert_sort.c
-algorithms/straight_sort_insert_header_node.c
-/home/wu/CLionProjects/data-structure/algorithms/straight_sort_insert_header_node.c
+algorithms/straight_insert_sort_seq_list.c
+/home/wu/CLionProjects/data-structure/algorithms/straight_insert_sort_seq_list.c
+algorithms/straight_insert_sort_link_list_header.c
+/home/wu/CLionProjects/data-structure/algorithms/straight_insert_sort_link_list_header.c
 algorithms/shell_sort.c
 /home/wu/CLionProjects/data-structure/algorithms/shell_sort.c
 algorithms/dijkstra_node.c
@@ -75,6 +81,8 @@ algorithms/seq_list.c
 /home/wu/CLionProjects/data-structure/algorithms/seq_list.c
 algorithms/maze_seq_stack.c
 /home/wu/CLionProjects/data-structure/algorithms/maze_seq_stack.c
+algorithms/bin_seq_tree.c
+/home/wu/CLionProjects/data-structure/algorithms/bin_seq_tree.c
 
 /home/wu/CLionProjects/data-structure/syntax/syntax.c
 stdio.h
