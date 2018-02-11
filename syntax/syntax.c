@@ -16,17 +16,17 @@ void syntax() {
     printf("Size of float : %d bytes\n", sizeof(f));
     printf("Size of double : %d bytes\n", sizeof(d));
 
+    //
+    char *str = "Hello";
+    printf("size of str : %d \n", sizeof(str));
 
-    printf("------------------------------------------------------------------\n");
+    int intary[3];
+    printf("size of int array : %d \n", sizeof(intary));
+    int *intpointer = intary;
+    printf("size of int pointer %d \n", sizeof(intpointer));
+    printf("zhizhen de zhizhen %d \n", sizeof(&intpointer));
+    printf("zhizhen de zhizhen %d \n", sizeof((&intpointer)[10]));
 
-
-    int num = 5;
-    int *p = &num;
-
-    printf("value of variable num : %d\n", num);
-    printf("value of &num %u\n", &num);
-    printf("value of variable p : %u\n", p);
-    printf("value of *p : %d\n", *p);
 
     return;
 }

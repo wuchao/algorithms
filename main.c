@@ -12,7 +12,7 @@
 int main() {
     printf("Hello, World!\n\n");
 
-//    syntax();
+    syntax();
 
     // 冒泡排序
 //    print_bubble_sort();
@@ -36,7 +36,7 @@ int main() {
 //    print_maze_seq_stack();
 
     // 二叉排序树
-    print_bin_tree();
+//    print_bin_tree();
 
     return 0;
 }

@@ -22,7 +22,7 @@ typedef struct BinTreeNode {
  */
 BinTree *create_bin_tree(DataType elem) {
     BinTree *T;
-    T = (BinTree *) malloc(sizeof(struct BinTree));
+    T = (BinTree *) malloc(sizeof(BinTree));
     if (T) {
         T->elem = elem;
         T->lchild = NULL;
@@ -70,7 +70,7 @@ int insert_bin_tree2(BinTree *T, DataType elem) {
 
         if (!p)
             T = s;             /* 插入s为根节点，此前树为空树 */
-        else if (key > p->elem.key)
+        else if (elem.key > p->elem.key)
             p->rchild = s;       /* 插入s为右孩子 */
         else
             p->lchild = s;       /* 插入s为左孩子 */
@@ -100,13 +100,13 @@ BinTree *preorder_init_bin_tree() {
 
     elem.key = getchar();
 
-    if (c != '#') {
-        T = create_bin_tree(elem);
-        if (T) {
-            T->lchild = preorder_bin_tree();
-            T->rchild = preorder_bin_tree();
-        }
-    }
+//    if (c != '#') {
+//        T = create_bin_tree(elem);
+//        if (T) {
+//            T->lchild = preorder_bin_tree();
+//            T->rchild = preorder_bin_tree();
+//        }
+//    }
 
     return T;
 }
